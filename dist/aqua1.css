@@ -24,3 +24,14 @@ input[type="radio"] {
   margin: 0;
   cursor: pointer;
 }
+.btn-ghost {
+  --btn-color: var(--btn-bg);
+  --btn-border-color: var(--btn-bg);
+  background: transparent;
+  transition: 0.3s;
+}
+
+.btn-ghost:hover {
+  --btn-color: white;
+  background: var(--btn-bg);
+}
