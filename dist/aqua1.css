@@ -56,10 +56,49 @@ input[type="radio"] {
   --btn-bg: var(--primary-color);
   --btn-border-color: var(--btn-bg);
 }
+.form-control {
+  --input-padding: 0.5rem 0.75rem;
+  --input-color: black;
+  --input-bg: white;
+  --input-border-color: rgba(0, 0, 0, 0.3);
+  --input-radius: 4px;
+  --input-placeholder-color: var(--secondary-color-darker);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--input-padding);
+  margin: 0;
+  color: var(--input-color);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-radius);
+  transition: 0.3s;
+}
   .form-input-material label {
   position: absolute;
   top: 0.5rem;
   left: 0;
   transition: 0.3s;
   transform-origin: left;
+}
+.form-input-material .form-control-material {
+  padding: 0.5rem 0;
+  background: transparent;
+  border: none;
+}
+
+.form-input-material .form-control-material:invalid ~ label {
+  color: var(--input-invalid-border-color);
+}
+
+.form-input-material .form-control-material:valid ~ label {
+  color: var(--input-valid-border-color);
+}
+
+.form-input-material .form-control-material:placeholder-shown ~ label {
+  color: var(--input-default-border-color);
+}
+
+.form-input-material .form-control-material:focus ~ label,
+.form-input-material .form-control-material:not(:placeholder-shown) ~ label {
+  transform: translateY(-120%) scale(0.75);
 }
