@@ -1,28 +1,18 @@
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  margin: 0;
+:root {
+    --primary-color: hsl(196, 78%, 61%);
 }
-
-button {
-  outline: none;
-  cursor: pointer;
-}
-
-input, textarea {
-  outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 0;
-  cursor: pointer;
+  .btn {
+  --btn-padding: 0.75rem 1.25rem;
+  --btn-border-width: 1px;
+  --btn-border-style: solid;
+  --btn-border-color: var(--secondary-color);
+  --btn-radius: 4px;
+  position: relative;
+  padding: var(--btn-padding);
+  color: var(--btn-color, black);
+  background: var(--btn-bg, white);
+  border: var(--btn-border-width) var(--btn-border-style) var(--btn-border-color);
+  border-radius: var(--btn-radius);
 }
 .btn-ghost {
   --btn-color: var(--btn-bg);
@@ -34,4 +24,16 @@ input[type="radio"] {
 .btn-ghost:hover {
   --btn-color: white;
   background: var(--btn-bg);
+} 
+ .btn-primary {
+  --btn-color: white;
+  --btn-bg: var(--primary-color);
+  --btn-border-color: var(--btn-bg);
+}
+  .form-input-material label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  transition: 0.3s;
+  transform-origin: left;
 }
